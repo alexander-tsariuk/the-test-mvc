@@ -1,0 +1,5 @@
+composer.lock
+.env
+/vendor
+/docker/mysql/data
+/.idea
