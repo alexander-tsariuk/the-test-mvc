@@ -153,8 +153,6 @@ async function insertComment() {
     } catch (e) {
         console.error(e);
     }
-
-    return false;
 }
 
 /**
@@ -183,7 +181,7 @@ function validateForm(formData) {
         field.classList.remove('error');
 
         let isInvalid = false;
-        const min = field.min ?? 1;
+        const min = field.getAttribute('min') ?? 1;
         const max = field.max ?? 254;
         let span = document.getElementById("error-" +objectKey);
         span.innerHTML = "";
