@@ -33,7 +33,11 @@ docker-compose build && docker-compose up -d
 ```sh   
 docker container ls | grep "test_db"
 ```
-6. Запустите в контейнере sql скрипт для создания таблицы комментариев 
+6. Установите выбор БД в файле с дампом
+```
+use `<DB_NAME>`
+```   
+7. Запустите в контейнере sql скрипт для создания таблицы комментариев 
 ```sh
 $  docker exec -i <CONTAINER_ID> mysql -u <DB_USER> -p<DB_PASSWORD> < ./docker/mysql/setup.sql
 ```
